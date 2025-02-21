@@ -1,79 +1,103 @@
+/* Background Gradient */
 body {
     font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
 }
 
+/* Header */
 header {
     background: #333;
-    color: #fff;
+    color: white;
     padding: 20px;
-    text-align: center;
 }
 
-nav {
-    background: #444;
-    padding: 10px;
-    text-align: center;
+.slogan {
+    font-size: 18px;
+    font-style: italic;
+    animation: scrollSlogan 10s linear infinite;
 }
 
+@keyframes scrollSlogan {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Navigation */
 nav ul {
     list-style: none;
     padding: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 18px;
 }
 
-section {
-    padding: 20px;
-    margin: 20px;
-    background: white;
-    border-radius: 5px;
-}
-
+/* Services Section */
 .service {
-    text-align: center;
-    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .service img {
-    width: 200px;
+    width: 100px;
     height: auto;
-    border-radius: 10px;
 }
 
+.service:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Pricing Table */
 table {
-    width: 100%;
+    margin: auto;
+    width: 60%;
     border-collapse: collapse;
-    margin-top: 20px;
 }
 
 table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
+    border: 1px solid white;
     padding: 10px;
-    text-align: left;
 }
 
+th {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Contact Form */
+form {
+    display: block;
+    margin: auto;
+    width: 80%;
+    max-width: 400px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+/* Footer */
 footer {
-    text-align: center;
-    padding: 20px;
-    background: #333;
-    color: white;
-}
-
-html {
-    scroll-behavior: smooth;
+    margin-top: 30px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.3);
 }

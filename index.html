@@ -3,17 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucid D. Dealerman Connection Services</title>
+    <title>Lucid D. Dealerman Tech Services</title>
+    <meta name="description" content="Lucid D. Dealerman Tech Services - Electrical sales, installations, CCTV, website development, and drilling services. Stay Connected, Stay Protected.">
+    <meta name="keywords" content="Electric sales, CCTV Installation, Website Development, Drilling Services, Uganda">
+    <meta name="author" content="Lucid D. Dealerman">
     <link rel="stylesheet" href="style.css">
-    
-    <!-- React and Babel CDN -->
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 </head>
 <body>
-    <div id="root"></div> <!-- React App Will Load Here -->
+    <header>
+        <h1>Lucid D. Dealerman Tech Services</h1>
+        <p>Providing Electric Sales & Installation</p>
+        <p class="slogan">Stay Connected, Stay Protected</p>
+    </header>
 
-    <script src="script.js" type="text/babel"></script>
+    <nav>
+        <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <img src="images/cctv-installation.jpg" alt="CCTV Installation">
+            <h3>CCTV Installation</h3>
+            <p>Secure your home and business with top-tier CCTV installations.</p>
+        </div>
+        <div class="service">
+            <img src="images/website-development.jpg" alt="Website Development">
+            <h3>Website Development</h3>
+            <p>Get a professional website developed with modern technologies.</p>
+        </div>
+        <div class="service">
+            <img src="images/drilling-services.jpg" alt="Drilling Services">
+            <h3>Drilling Services</h3>
+            <p>Affordable and reliable drilling services for your needs. <br>
+                <video controls>
+                    <source src="videos/drilling-services.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </p>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <h2>Pricing</h2>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>CCTV Installation</td>
+                <td>100,000 UGX</td>
+            </tr>
+            <tr>
+                <td>Website Development</td>
+                <td>650,000 UGX</td>
+            </tr>
+            <tr>
+                <td>Drilling Services</td>
+                <td>25,000 UGX</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="mailto:info@luciddealerman.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Lucid D. Dealerman Tech Services</p>
+        <p>Follow us: 
+            <a href="https://twitter.com/luciddavy" target="_blank">Twitter</a> | 
+            <a href="https://www.instagram.com/mr.luciddavy/" target="_blank">Instagram</a> | 
+            <a href="https://wa.me/+256787537226" target="_blank">WhatsApp</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
