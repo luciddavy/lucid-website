@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
             document.querySelector(this.getAttribute("href")).scrollIntoView({
@@ -9,38 +9,18 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Lazy load images
-    const images = document.querySelectorAll("img");
-    images.forEach(img => {
-        img.loading = "lazy";
-    });
-
-    // Fade-in animation for services
-    const services = document.querySelectorAll(".service");
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
+    // Fade-in animation for services and gallery images
+    const fadeElements = document.querySelectorAll(".service, #gallery img");
+    
+    function checkVisibility() {
+        fadeElements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.9) {
+                el.classList.add("visible");
             }
         });
-    }, { threshold: 0.3 });
+    }
 
-    services.forEach(service => observer.observe(service));
-
-    // Replace broken images
-    images.forEach(img => {
-        img.onerror = function () {
-            this.src = "placeholder.jpg"; // Make sure to have a default placeholder image
-        };
-    });
+    window.addEventListener("scroll", checkVisibility);
+    checkVisibility(); // Run on page load
 });
-/* Fade-in animation */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1.5s ease-out forwards;
-}
