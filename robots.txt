@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /private/  # Blocks all URLs under /private/
+Disallow: /admin/    # Blocks all URLs under /admin/
