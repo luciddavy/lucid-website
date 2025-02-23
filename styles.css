@@ -135,14 +135,32 @@ header {
     text-align: center;
 }
 
+/* Navigation Bar Styling */
+nav {
+    background-color: #003366; /* Dark blue */
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
 nav a {
-    color: #1a1a1a; /* Darker color for visibility */
-    font-weight: bold;
+    color: white;
     text-decoration: none;
+    font-size: 1.1rem;
 }
 
 nav a:hover {
-    color: #ff6600; /* Highlight on hover */
+    color: #ff6600;
 }
     background-color: #0EA5E9; /* Cyan highlight on hover */
 }
@@ -174,4 +192,10 @@ nav a:hover {
 
 .footer a:hover {
     color: #ff6600;
+}
+/* Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
